@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   post '/login', to: 'authentication#login'
   namespace :api do
     namespace :v1 do
-      resources :badges
-      resources :duties
+
+      resources :badges # generating standard RESTful route for badges
+      resources :duties # generating standard RESTful route for badges
+  
       resources :institutions
       resources :roles do
         collection do
